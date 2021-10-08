@@ -1,22 +1,23 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import './App.css';
-import Sidebar from './components/Sidebar/Sidebar'
-import Header from './components/Header/Header';
+
+import Home from './components/Home/Home';
+import {BrowserRouter} from 'react-router-dom'
+
 
 const App=() =>{
 
-  const toggle=useSelector(state=>state.navbar.toggle);
+  // const toggle=useSelector(state=>state.navbar.toggle);
  
   return (
-   <div className="app">
-     <Header />
-     <Sidebar />
+    <BrowserRouter>
+    <Home/>
+    </BrowserRouter>
      
      
      
-   </div>
+    
    
   );
 }
